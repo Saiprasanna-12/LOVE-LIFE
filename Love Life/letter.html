@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/music/letter.mpeg">
+</audio>
+
+<script>
+if (localStorage.getItem("auth") !== "yes") {
+  window.location.href = "index.html";
+}
+</script>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/music/heart.mp3">
+</audio>
+
+<h2>From My Heart 🤍</h2>
+<div id="typing-text" class="letter-box"></div>
+
+<script src="js/script.js"></script>
+
+<script>
+const message = `
+This isn’t a special day.
+I just felt like telling you something.
+
+I don’t always know how to explain what you mean to me,
+but being with you feels easy.
+Talking to you feels comfortable.
+And that matters to me more than anything.
+
+I care about you — in the small ways,
+in the quiet moments,
+even when I don’t say it out loud.
+
+I love the way you irritate me,
+like when you squeeze my cheeks just to see my reaction.
+And honestly, I love irritating you too —
+doing small things like squeezing your ear
+just to annoy you and make you look at me.
+
+I love the way you always try to kiss my cheeks,
+like it’s your habit,
+like you can’t help it.
+Those small moments stay with me more than you know.
+
+I respect you for who you are
+and for the way you try, even on hard days.
+I notice the little things you do,
+and I can understand them.
+
+You make my days feel better just by being there.
+Sometimes you make me laugh,
+sometimes you calm me down,
+sometimes you’re just there —
+and that’s enough.
+
+This is how I love you.
+Not perfect, not dramatic, just real and honest.
+
+I just wanted you to know that you matter to me.
+More than you probably realize.
+
+Hope this little letter makes you smile.
+
+Always 🤍
+Your's little Chinnu ❤️ `;
+
+let i = 0;
+function typeText() {
+  if (i < message.length) {
+    document.getElementById("typing-text").innerHTML +=
+      message[i] === "\n" ? "<br>" : message[i];
+    i++;
+    setTimeout(typeText, 40);
+  }
+}
+typeText();
+</script>
+
+<a href="home.html" class="btn">and with love always 💗</a>
+</body>
+</html>

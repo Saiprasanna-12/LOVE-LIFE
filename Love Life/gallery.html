@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" autoplay loop>
+  <source src="assets/music/gallery.mpeg">
+</audio>
+
+<script>
+if (localStorage.getItem("auth") !== "yes") {
+  window.location.href = "index.html";
+}
+</script>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/music/memories.mp3">
+</audio>
+
+<h2>Memories 🤍</h2>
+<h4>Tap my hearts</h4>
+<div class="memory-grid">
+
+  <div class="memory-card" onclick="revealMemory(this)">
+    <div class="heart-beat">💖</div>
+    <img src="assets/photos/love1.jpg" alt="Memory 1">
+  </div>
+
+  <div class="memory-card" onclick="revealMemory(this)">
+    <div class="heart-beat">💘</div>
+    <img src="assets/photos/love2.jpeg" alt="Memory 2">
+  </div>
+
+  <div class="memory-card" onclick="revealMemory(this)">
+    <div class="heart-beat">💗</div>
+    <img src="assets/photos/love3.jpeg" alt="Memory 3">
+  </div>
+
+  <div class="memory-card" onclick="revealMemory(this)">
+    <div class="heart-beat">❤️</div>
+    <img src="assets/photos/love4.jpeg" alt="Memory 4">
+  </div>
+
+</div>
+
+<a href="letter.html" class="btn">here from heart to your heart 🤍</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
