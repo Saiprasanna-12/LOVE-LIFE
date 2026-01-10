@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+if (localStorage.getItem("auth") !== "yes") {
+  window.location.href = "index.html";
+}
+</script>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/music/home.mpeg">
+</audio>
+
+<h1>Oyyyy Abbaiiiii.........🤍</h1>
+<p>I made this… just for you.</p>
+
+<div class="home-cards">
+
+  <a href="journey.html" class="home-card" >
+    <img src="assets/photos/journey.jpeg" alt="Our Story">
+    <div class="card-text">Our Story</div>
+  </a>
+
+  <a href="gallery.html" class="home-card">
+    <img src="assets/photos/memories.jpeg" alt="Memories">
+    <div class="card-text">Memories</div>
+  </a>
+
+  <a href="letter.html" class="home-card">
+    <img src="assets/photos/story.jpeg" alt="From My Heart">
+    <div class="card-text">From My Heart</div>
+  </a>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

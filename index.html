@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>🔒 Just for You</h2>
+
+<input type="password" id="pwd" placeholder="Our secret 🤍">
+<button onclick="login()">Open</button>
+
+<script>
+function login() {
+  const password = "Onlyus";
+  const entered = document.getElementById("pwd").value;
+
+  if (entered === password) {
+    localStorage.setItem("auth", "yes");
+    window.location.href = "home.html";
+  } else {
+    alert("Wrong secret 🤍");
+  }
+}
+</script>
+
+</body>
+</html>
